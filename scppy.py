@@ -78,7 +78,7 @@ def main():
 		
 	    if option == 1:
 
-		action_scp = raw_input("\n\033[3;34mscp -rp -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view folders python on desktop.\033[3;34m)" % (port)).strip()
+		action_scp = raw_input("\n\033[3;34mscp -rp -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view folders on desktop.\033[3;34m)" % (port)).strip()
 
 		files_store = os.listdir(path)
 		for file in files_store:
@@ -238,7 +238,7 @@ def main():
 		    scp(user, host, port, password,path_srv)
 
 	    
-	    if option == 3:
+	    if option == 4:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file tar.bz2 on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -293,7 +293,7 @@ def main():
 		    scp(user, host, port, password,path_srv)
 		    
 		    
-	    if option == 4:
+	    if option == 5:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file python on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -347,7 +347,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 5:
+	    if option == 6:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file bash on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -400,7 +400,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 6:
+	    if option == 7:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file HTML on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -454,7 +454,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 7:
+	    if option == 8:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file PHP on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -509,7 +509,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 8:
+	    if option == 9:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file CSS on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -563,7 +563,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 9:
+	    if option == 10:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file JavaScript on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -618,7 +618,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
-	    if option == 10:
+	    if option == 11:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file JavaScript on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -673,7 +673,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 
-	    elif option == 11:
+	    elif option == 12:
 		print("..")
 		sleep(1)
 		print("....")
