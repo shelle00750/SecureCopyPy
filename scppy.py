@@ -562,63 +562,8 @@ def main():
 		else:
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
-		    
+   
 	    if option == 10:
-
-		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file JavaScript on desktop.\033[3;34m)" % (port)).strip()
-	    
-		files_store = os.listdir(path)
-		for file in files_store:
-		    if file.endswith(".css"):
-			source = file
-			print "[+]%s" % source
-
-		action_js = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33m...\033[3;34m):" % (port)).strip()
-		
-		if os.path.isfile(pathfi + '/' + action_js) and os.access(pathfi + '/' + action_js, os.R_OK):
-
-		    action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s\033[3;34m %s\033[3;34m \033[3;34m(\033[3;33mEnter to next.\033[3;34m)" % (port,action_css)).strip()
-
-		    print("\033[3;34m\n[+]Enter (\033[3;33mrun\033[3;34m) to execute the (\033[3;33mscp\033[3;34m) command.\n\033[3;m")
-		    action_run = raw_input("\033[3;34mscp -r -P \033[3;34m%s\033[3;34m\033[3;34m %s/\033[3;34m%s\033[3;34m\033[3;34m %s@%s\033[3;34m\033[3;34m:%s:\033[3;34m" % (port,pathfi,action_js,user,host,path_srv)).strip()
-	        
-		    if action_run == "back":
-			scp(user, host, port, password,path_srv)
-		    elif action_run == "exit":
-			sys.exit(exit_msg)	
-		    elif action_run == "run":
-			
-			ssh_newkey = 'Are you sure you want to continue connecting'
-	    
-			connStr = 'scp -r -P '+ port + ' ' + '%s/' % pathfi + action_js + ' ' + user + '@' + host+ ':' + path_srv
-
-			child = pexpect.spawn(connStr)
-			ret = child.expect([pexpect.TIMEOUT, ssh_newkey,\
-				'[P|p]assword:'])
-			if ret == 0:
-			    print '[-] Error Connecting'
-			    return
-    
-			if ret == 1:
-			    child.sendline('yes')
-			    ret = child.expect([pexpect.TIMEOUT, \
-					'[P|p]assword:'])
-			    if ret == 0:
-				print '[-] Error Connecting'
-				return
-    
-			child.sendline(password)
-			return child
-		
-		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
-			scp(user, host, port, password,path_srv)#'''
-			
-		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
-		    scp(user, host, port, password,path_srv)
-		    
-	    if option == 11:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file JavaScript on desktop.\033[3;34m)" % (port)).strip()
 	    
@@ -673,7 +618,7 @@ def main():
 		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
 		    scp(user, host, port, password,path_srv)
 
-	    elif option == 12:
+	    elif option == 11:
 		print("..")
 		sleep(1)
 		print("....")
