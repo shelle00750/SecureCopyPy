@@ -49,7 +49,6 @@ def main():
     path_srv = '/tmp'
     
     try:
-	
 	def scp(user, host, port, password,path_srv):
 	    
 	    try:
@@ -73,12 +72,12 @@ def main():
 	    try:
 	       option =(int(raw_input("\033[1;36m[?] - \033[1;moption:\033[37m")))
 	    except ValueError:
-		print("\033[3;91m\n[!] Error : Invalid option entered.\033[3;34m\n")
+		print("\033[1;91m\n[!] Error : Invalid option entered.\n\033[37m")
 		scp(user, host, port, password,path_srv)
 		
 	    if option == 1:
 
-		action_scp = raw_input("\n\033[3;34mscp -rp -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view folders on desktop.\033[3;34m)" % (port)).strip()
+		action_scp = raw_input("\n\033[3;34mscp -rp -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view folders python on desktop.\033[3;34m)" % (port)).strip()
 
 		files_store = os.listdir(path)
 		for file in files_store:
@@ -119,13 +118,14 @@ def main():
 				return
     
 			child.sendline(password)
-			return child  
+			return child 
+			
 
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 	    
 	    if option == 2:
@@ -167,19 +167,22 @@ def main():
 			    child.sendline('yes')
 			    ret = child.expect([pexpect.TIMEOUT, \
 					'[P|p]assword:'])
+			    
+			    
 			    if ret == 0:
 				print '[-] Error Connecting'
 				return
     
 			child.sendline(password)
 			return child
+			
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\033[34m\n")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 		    
 	    
@@ -230,11 +233,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\033[34m\n")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 
 	    
@@ -285,11 +288,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m\n")
 		    scp(user, host, port, password,path_srv)
 		    
 		    
@@ -340,11 +343,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 		    
 	    if option == 6:
@@ -393,11 +396,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 		    
 	    if option == 7:
@@ -447,11 +450,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 		    
 	    if option == 8:
@@ -502,11 +505,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 		    
 	    if option == 9:
@@ -556,13 +559,14 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
-   
+		    
+
 	    if option == 10:
 
 		action_scp = raw_input("\n\033[3;34mscp -r -P \033[3;34m%s \033[3;34m(\033[3;33mEnter to view file JavaScript on desktop.\033[3;34m)" % (port)).strip()
@@ -611,11 +615,11 @@ def main():
 			return child
 		
 		    else:
-			print("\033[3;91m\n[!] Error : Command not found.\033[3;34m\n")
+			print("\033[0;91m\n[!] Error : Command not found.\n\033[34m")
 			scp(user, host, port, password,path_srv)#'''
 			
 		else:
-		    print("\033[3;91m\n[!] Error : Either the file is missing or not readable.\033[3;34m\n")
+		    print("\033[0;91m\n[!] Error : Either the file is missing or not readable.\n\033[34m")
 		    scp(user, host, port, password,path_srv)
 
 	    elif option == 11:
@@ -627,13 +631,13 @@ def main():
 		quit()
 		
 	    else:
-		print("\033[3;91m\n[!] Error : Invalid option entered.\033[3;34m\n")
+		print("\033[0;91m\n[!] Error : Invalid option entered.\033[37m\n")
 		scp(user, host, port, password,path_srv)
-    
     
 	child = scp(user, host, port, password,path_srv)
 	send_command(child, 'Done..!')
-	
+	scp(user, host, port, password,path_srv)
+
     except KeyboardInterrupt:
 	print ("\n" + exit_msg)
 	
