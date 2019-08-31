@@ -688,6 +688,7 @@ def main():
     
 	child = scp(user, host, port, password,path_srv)
 	send_command(child, 'Done..!')
+	scp(user, host, port, password,path_srv)
 
     except KeyboardInterrupt:
 	print ("\n" + exit_msg)
